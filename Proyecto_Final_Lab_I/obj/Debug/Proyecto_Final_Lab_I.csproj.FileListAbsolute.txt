@@ -8,3 +8,21 @@ C:\Users\gonza\OneDrive\Escritorio\DAU\Proyecto_Final_Lab_I\Proyecto_Final_Lab_I
 C:\Users\gonza\OneDrive\Escritorio\DAU\Proyecto_Final_Lab_I\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.exe
 C:\Users\gonza\OneDrive\Escritorio\DAU\Proyecto_Final_Lab_I\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.pdb
 C:\Users\gonza\OneDrive\Escritorio\DAU\Proyecto_Final_Lab_I\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormPrincipal.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.exe.config
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.exe
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.pdb
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csprojAssemblyReference.cache
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormClientes.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormCuenta_Cte.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormPrincipal.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormProductos.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormProveedores.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormVentas.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.Properties.Resources.resources
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.GenerateResource.cache
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.CoreCompileInputs.cache
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.exe
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.pdb
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.CopyComplete
