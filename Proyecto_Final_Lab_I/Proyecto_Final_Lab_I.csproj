@@ -49,60 +49,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormClientes.cs">
+    <Compile Include="Clases\DetalleFactura.cs" />
+    <Compile Include="Clases\Facturas.cs" />
+    <Compile Include="Clases\Productos.cs" />
+    <Compile Include="Clases\Proveedores.cs" />
+    <Compile Include="Formularios\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientes.Designer.cs">
+    <Compile Include="Formularios\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCuenta_Cte.cs">
+    <Compile Include="Formularios\FormCuenta_Cte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCuenta_Cte.Designer.cs">
+    <Compile Include="Formularios\FormCuenta_Cte.Designer.cs">
       <DependentUpon>FormCuenta_Cte.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrincipal.cs">
+    <Compile Include="Formularios\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrincipal.Designer.cs">
+    <Compile Include="Formularios\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.cs">
+    <Compile Include="Formularios\FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductos.Designer.cs">
+    <Compile Include="Formularios\FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProveedores.cs">
+    <Compile Include="Formularios\FormProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProveedores.Designer.cs">
+    <Compile Include="Formularios\FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVentas.cs">
+    <Compile Include="Formularios\FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVentas.Designer.cs">
+    <Compile Include="Formularios\FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormClientes.resx">
+    <EmbeddedResource Include="Formularios\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCuenta_Cte.resx">
+    <EmbeddedResource Include="Formularios\FormCuenta_Cte.resx">
       <DependentUpon>FormCuenta_Cte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrincipal.resx">
+    <EmbeddedResource Include="Formularios\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
+    <EmbeddedResource Include="Formularios\FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProveedores.resx">
+    <EmbeddedResource Include="Formularios\FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVentas.resx">
+    <EmbeddedResource Include="Formularios\FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -181,6 +185,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
