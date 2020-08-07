@@ -28,26 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_titulo_venta = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.btn_facturar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bnt_cancelar = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txt_cantidad = new System.Windows.Forms.TextBox();
+            this.txt_precio = new System.Windows.Forms.TextBox();
+            this.txt_codigo = new System.Windows.Forms.TextBox();
+            this.dgv_busquedaProd = new System.Windows.Forms.DataGridView();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.pb_buscar = new System.Windows.Forms.PictureBox();
+            this.dgv_detalleFactura = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_busquedaProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_titulo_venta
@@ -61,73 +70,19 @@
             this.lbl_titulo_venta.TabIndex = 0;
             this.lbl_titulo_venta.Text = "Venta";
             // 
-            // textBox2
+            // txt_descripcion
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Location = new System.Drawing.Point(12, 163);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 15);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Descripción";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(12, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 15);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Código de producto";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Location = new System.Drawing.Point(175, 200);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 15);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Cantidad";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Location = new System.Drawing.Point(12, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 15);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "$";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 307);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 291);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(489, 127);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(549, 385);
-            this.dataGridView2.TabIndex = 7;
+            this.txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txt_descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_descripcion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descripcion.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_descripcion.Location = new System.Drawing.Point(12, 128);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.ReadOnly = true;
+            this.txt_descripcion.Size = new System.Drawing.Size(293, 15);
+            this.txt_descripcion.TabIndex = 2;
+            this.txt_descripcion.Text = "Descripción";
             // 
             // txt_buscar
             // 
@@ -136,11 +91,14 @@
             this.txt_buscar.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_buscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_buscar.Location = new System.Drawing.Point(12, 279);
+            this.txt_buscar.Location = new System.Drawing.Point(12, 278);
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(299, 15);
             this.txt_buscar.TabIndex = 8;
             this.txt_buscar.Text = "Buscar";
+            this.txt_buscar.TextChanged += new System.EventHandler(this.pb_buscar_Click);
+            this.txt_buscar.Leave += new System.EventHandler(this.txt_buscar_Leave);
+            this.txt_buscar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_buscar_MouseDown);
             // 
             // btn_facturar
             // 
@@ -157,21 +115,21 @@
             this.btn_facturar.Text = "Facturar";
             this.btn_facturar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bnt_cancelar
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Tomato;
-            this.button1.Location = new System.Drawing.Point(730, 532);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 66);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bnt_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bnt_cancelar.FlatAppearance.BorderSize = 3;
+            this.bnt_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.bnt_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnt_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_cancelar.ForeColor = System.Drawing.Color.Tomato;
+            this.bnt_cancelar.Location = new System.Drawing.Point(730, 532);
+            this.bnt_cancelar.Name = "bnt_cancelar";
+            this.bnt_cancelar.Size = new System.Drawing.Size(151, 66);
+            this.bnt_cancelar.TabIndex = 10;
+            this.bnt_cancelar.Text = "Cancelar";
+            this.bnt_cancelar.UseVisualStyleBackColor = true;
+            this.bnt_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // shapeContainer1
             // 
@@ -179,64 +137,24 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape6,
             this.lineShape5,
             this.lineShape4,
             this.lineShape3,
-            this.lineShape2,
             this.lineShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(1050, 610);
             this.shapeContainer1.TabIndex = 11;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape4
+            // lineShape6
             // 
-            this.lineShape4.BorderColor = System.Drawing.Color.LightGreen;
-            this.lineShape4.BorderWidth = 2;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 11;
-            this.lineShape4.X2 = 301;
-            this.lineShape4.Y1 = 185;
-            this.lineShape4.Y2 = 185;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.LightGreen;
-            this.lineShape3.BorderWidth = 2;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 11;
-            this.lineShape3.X2 = 147;
-            this.lineShape3.Y1 = 144;
-            this.lineShape3.Y2 = 144;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.LightGreen;
-            this.lineShape2.BorderWidth = 2;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 175;
-            this.lineShape2.X2 = 304;
-            this.lineShape2.Y1 = 221;
-            this.lineShape2.Y2 = 221;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.LightGreen;
-            this.lineShape1.BorderWidth = 2;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 13;
-            this.lineShape1.X2 = 142;
-            this.lineShape1.Y1 = 221;
-            this.lineShape1.Y2 = 221;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_Final_Lab_I.Properties.Resources.image1;
-            this.pictureBox1.Location = new System.Drawing.Point(315, 273);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.lineShape6.BorderColor = System.Drawing.Color.LightGreen;
+            this.lineShape6.BorderWidth = 2;
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 171;
+            this.lineShape6.X2 = 308;
+            this.lineShape6.Y1 = 185;
+            this.lineShape6.Y2 = 185;
             // 
             // lineShape5
             // 
@@ -244,9 +162,208 @@
             this.lineShape5.BorderWidth = 2;
             this.lineShape5.Name = "lineShape5";
             this.lineShape5.X1 = 12;
-            this.lineShape5.X2 = 352;
+            this.lineShape5.X2 = 360;
             this.lineShape5.Y1 = 297;
             this.lineShape5.Y2 = 297;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.LightGreen;
+            this.lineShape4.BorderWidth = 2;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 11;
+            this.lineShape4.X2 = 309;
+            this.lineShape4.Y1 = 149;
+            this.lineShape4.Y2 = 149;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.LightGreen;
+            this.lineShape3.BorderWidth = 2;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 11;
+            this.lineShape3.X2 = 155;
+            this.lineShape3.Y1 = 108;
+            this.lineShape3.Y2 = 108;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.LightGreen;
+            this.lineShape1.BorderWidth = 2;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 13;
+            this.lineShape1.X2 = 150;
+            this.lineShape1.Y1 = 185;
+            this.lineShape1.Y2 = 185;
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txt_cantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_cantidad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_cantidad.Location = new System.Drawing.Point(175, 165);
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(130, 15);
+            this.txt_cantidad.TabIndex = 2;
+            this.txt_cantidad.Text = "Cantidad";
+            this.txt_cantidad.Leave += new System.EventHandler(this.txt_cantidad_Leave);
+            this.txt_cantidad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_cantidad_MouseDown);
+            // 
+            // txt_precio
+            // 
+            this.txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txt_precio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_precio.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precio.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_precio.Location = new System.Drawing.Point(13, 165);
+            this.txt_precio.Name = "txt_precio";
+            this.txt_precio.Size = new System.Drawing.Size(130, 15);
+            this.txt_precio.TabIndex = 1;
+            this.txt_precio.TabStop = false;
+            this.txt_precio.Text = "$ 0.00";
+            // 
+            // txt_codigo
+            // 
+            this.txt_codigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txt_codigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_codigo.Location = new System.Drawing.Point(12, 87);
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(293, 15);
+            this.txt_codigo.TabIndex = 1;
+            this.txt_codigo.Text = "Código del producto";
+            this.txt_codigo.Leave += new System.EventHandler(this.txt_codigo_Leave);
+            this.txt_codigo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_codigo_MouseDown);
+            // 
+            // dgv_busquedaProd
+            // 
+            this.dgv_busquedaProd.AllowUserToResizeColumns = false;
+            this.dgv_busquedaProd.AllowUserToResizeRows = false;
+            this.dgv_busquedaProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_busquedaProd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.dgv_busquedaProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_busquedaProd.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_busquedaProd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_busquedaProd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_busquedaProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_busquedaProd.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_busquedaProd.EnableHeadersVisualStyles = false;
+            this.dgv_busquedaProd.GridColor = System.Drawing.Color.LightGreen;
+            this.dgv_busquedaProd.Location = new System.Drawing.Point(12, 307);
+            this.dgv_busquedaProd.Name = "dgv_busquedaProd";
+            this.dgv_busquedaProd.ReadOnly = true;
+            this.dgv_busquedaProd.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_busquedaProd.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_busquedaProd.RowHeadersVisible = false;
+            this.dgv_busquedaProd.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgv_busquedaProd.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_busquedaProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_busquedaProd.Size = new System.Drawing.Size(395, 291);
+            this.dgv_busquedaProd.TabIndex = 6;
+            this.dgv_busquedaProd.Visible = false;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
+            this.btn_agregar.FlatAppearance.BorderSize = 2;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.LightGreen;
+            this.btn_agregar.Location = new System.Drawing.Point(13, 202);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(341, 37);
+            this.btn_agregar.TabIndex = 3;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // pb_buscar
+            // 
+            this.pb_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_buscar.Image = global::Proyecto_Final_Lab_I.Properties.Resources.image1;
+            this.pb_buscar.Location = new System.Drawing.Point(322, 264);
+            this.pb_buscar.Name = "pb_buscar";
+            this.pb_buscar.Size = new System.Drawing.Size(39, 29);
+            this.pb_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_buscar.TabIndex = 12;
+            this.pb_buscar.TabStop = false;
+            this.pb_buscar.Click += new System.EventHandler(this.pb_buscar_Click);
+            // 
+            // dgv_detalleFactura
+            // 
+            this.dgv_detalleFactura.AllowUserToResizeColumns = false;
+            this.dgv_detalleFactura.AllowUserToResizeRows = false;
+            this.dgv_detalleFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_detalleFactura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.dgv_detalleFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_detalleFactura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_detalleFactura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_detalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_detalleFactura.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_detalleFactura.EnableHeadersVisualStyles = false;
+            this.dgv_detalleFactura.GridColor = System.Drawing.Color.LightGreen;
+            this.dgv_detalleFactura.Location = new System.Drawing.Point(454, 87);
+            this.dgv_detalleFactura.Name = "dgv_detalleFactura";
+            this.dgv_detalleFactura.ReadOnly = true;
+            this.dgv_detalleFactura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalleFactura.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_detalleFactura.RowHeadersVisible = false;
+            this.dgv_detalleFactura.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgv_detalleFactura.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_detalleFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_detalleFactura.Size = new System.Drawing.Size(565, 422);
+            this.dgv_detalleFactura.TabIndex = 13;
             // 
             // FormVentas
             // 
@@ -254,24 +371,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1050, 610);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgv_detalleFactura);
+            this.Controls.Add(this.pb_buscar);
+            this.Controls.Add(this.btn_agregar);
+            this.Controls.Add(this.bnt_cancelar);
             this.Controls.Add(this.btn_facturar);
             this.Controls.Add(this.txt_buscar);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dgv_busquedaProd);
+            this.Controls.Add(this.txt_cantidad);
+            this.Controls.Add(this.txt_codigo);
+            this.Controls.Add(this.txt_precio);
+            this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.lbl_titulo_venta);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVentas";
             this.Text = "FormVentas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_busquedaProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,21 +398,22 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_titulo_venta;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Button btn_facturar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bnt_cancelar;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_buscar;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private System.Windows.Forms.TextBox txt_cantidad;
+        private System.Windows.Forms.TextBox txt_precio;
+        private System.Windows.Forms.TextBox txt_codigo;
+        private System.Windows.Forms.DataGridView dgv_busquedaProd;
+        private System.Windows.Forms.Button btn_agregar;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
+        private System.Windows.Forms.DataGridView dgv_detalleFactura;
     }
 }

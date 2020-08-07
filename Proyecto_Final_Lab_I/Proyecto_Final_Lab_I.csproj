@@ -186,7 +186,9 @@
   <ItemGroup>
     <None Include="Resources\image2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\image3.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image1.png" />
   </ItemGroup>
