@@ -224,7 +224,7 @@
             this.dgv_busquedaProd.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_busquedaProd.EnableHeadersVisualStyles = false;
             this.dgv_busquedaProd.GridColor = System.Drawing.Color.LightGreen;
-            this.dgv_busquedaProd.Location = new System.Drawing.Point(403, 137);
+            this.dgv_busquedaProd.Location = new System.Drawing.Point(411, 137);
             this.dgv_busquedaProd.Name = "dgv_busquedaProd";
             this.dgv_busquedaProd.ReadOnly = true;
             this.dgv_busquedaProd.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
