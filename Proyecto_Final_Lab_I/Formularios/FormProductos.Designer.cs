@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_titulo_productos = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -61,6 +61,7 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
             this.btn_agregar.FlatAppearance.BorderSize = 2;
             this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
@@ -73,22 +74,24 @@
             this.btn_agregar.TabIndex = 15;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Tomato;
-            this.button1.Location = new System.Drawing.Point(135, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 37);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btn_cancelar.FlatAppearance.BorderSize = 2;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.Tomato;
+            this.btn_cancelar.Location = new System.Drawing.Point(135, 401);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(104, 37);
+            this.btn_cancelar.TabIndex = 16;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // lineShape3
             // 
@@ -148,53 +151,61 @@
             // 
             this.txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_descripcion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_descripcion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descripcion.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_descripcion.Location = new System.Drawing.Point(12, 164);
+            this.txt_descripcion.Location = new System.Drawing.Point(14, 219);
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(293, 15);
+            this.txt_descripcion.Size = new System.Drawing.Size(225, 15);
             this.txt_descripcion.TabIndex = 18;
-            this.txt_descripcion.Text = "Descripcion";
+            this.txt_descripcion.Text = "Descripción";
+            this.txt_descripcion.Leave += new System.EventHandler(this.txt_descripcion_Leave);
+            this.txt_descripcion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_descripcion_MouseDown);
             // 
             // txt_codigo
             // 
             this.txt_codigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_codigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_codigo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_codigo.Location = new System.Drawing.Point(12, 211);
+            this.txt_codigo.Location = new System.Drawing.Point(14, 172);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(293, 15);
+            this.txt_codigo.Size = new System.Drawing.Size(224, 15);
             this.txt_codigo.TabIndex = 19;
-            this.txt_codigo.Text = "Código de producto";
+            this.txt_codigo.Text = "Código del producto";
+            this.txt_codigo.Leave += new System.EventHandler(this.txt_codigo_Leave);
+            this.txt_codigo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_codigo_MouseDown);
             // 
             // txt_precio
             // 
             this.txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_precio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_precio.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_precio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_precio.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_precio.Location = new System.Drawing.Point(12, 253);
             this.txt_precio.Name = "txt_precio";
-            this.txt_precio.Size = new System.Drawing.Size(293, 15);
+            this.txt_precio.Size = new System.Drawing.Size(225, 15);
             this.txt_precio.TabIndex = 20;
-            this.txt_precio.Text = "Precio";
+            this.txt_precio.Text = "$ 0,00";
+            this.txt_precio.Leave += new System.EventHandler(this.txt_precio_Leave);
+            this.txt_precio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_precio_MouseDown);
             // 
             // txt_stock
             // 
             this.txt_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_stock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_stock.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_stock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_stock.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_stock.Location = new System.Drawing.Point(12, 298);
             this.txt_stock.Name = "txt_stock";
-            this.txt_stock.Size = new System.Drawing.Size(293, 15);
+            this.txt_stock.Size = new System.Drawing.Size(225, 15);
             this.txt_stock.TabIndex = 21;
             this.txt_stock.Text = "Stock";
+            this.txt_stock.Leave += new System.EventHandler(this.txt_stock_Leave);
+            this.txt_stock.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_stock_MouseDown);
             // 
             // dgv_busquedaProd
             // 
@@ -255,7 +266,7 @@
             this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.txt_descripcion);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.lbl_titulo_productos);
             this.Controls.Add(this.shapeContainer1);
@@ -272,7 +283,7 @@
 
         private System.Windows.Forms.Label lbl_titulo_productos;
         private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;

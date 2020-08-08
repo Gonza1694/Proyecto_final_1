@@ -161,7 +161,7 @@ namespace Proyecto_Final_Lab_I
             Productos.Add(new Productos
             {
                 Codigo = 20,
-                Descripcion = "Fenet",
+                Descripcion = "Fernet",
                 PrecioUnitario = 450,
                 Stock = 20
             });

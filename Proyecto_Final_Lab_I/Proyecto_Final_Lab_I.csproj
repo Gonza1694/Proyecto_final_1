@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Clases\DetalleFactura.cs" />
     <Compile Include="Clases\Facturas.cs" />
+    <Compile Include="Clases\Metodos.cs" />
     <Compile Include="Clases\Productos.cs" />
     <Compile Include="Clases\Proveedores.cs" />
     <Compile Include="Formularios\FormClientes.cs">

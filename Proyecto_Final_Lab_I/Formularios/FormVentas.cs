@@ -36,13 +36,7 @@ namespace Proyecto_Final_Lab_I
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             AgregarProducto();
-        }
-
-        private Productos ObtenerProducto(int valor)
-        {
-            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
-            return producto;
-        }
+        }      
 
         private void pb_buscar_Click(object sender, EventArgs e)
         {
@@ -234,7 +228,11 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["Stock"].Visible = false;
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
-
+        private Productos ObtenerProducto(int valor)
+        {
+            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
+            return producto;
+        }
         #endregion METODOS
     }
 }

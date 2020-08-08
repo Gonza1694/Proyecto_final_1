@@ -75,7 +75,7 @@
             // 
             this.txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_descripcion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_descripcion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descripcion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_descripcion.Location = new System.Drawing.Point(12, 128);
@@ -89,7 +89,7 @@
             // 
             this.txt_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_buscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_buscar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_buscar.Location = new System.Drawing.Point(12, 278);
@@ -103,6 +103,7 @@
             // 
             // btn_facturar
             // 
+            this.btn_facturar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_facturar.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
             this.btn_facturar.FlatAppearance.BorderSize = 3;
             this.btn_facturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
@@ -119,13 +120,14 @@
             // 
             // bnt_cancelar
             // 
+            this.bnt_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bnt_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.bnt_cancelar.FlatAppearance.BorderSize = 3;
             this.bnt_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.bnt_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_cancelar.ForeColor = System.Drawing.Color.Tomato;
-            this.bnt_cancelar.Location = new System.Drawing.Point(730, 532);
+            this.bnt_cancelar.Location = new System.Drawing.Point(694, 532);
             this.bnt_cancelar.Name = "bnt_cancelar";
             this.bnt_cancelar.Size = new System.Drawing.Size(151, 66);
             this.bnt_cancelar.TabIndex = 10;
@@ -202,7 +204,7 @@
             // 
             this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_cantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cantidad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_cantidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_cantidad.Location = new System.Drawing.Point(175, 165);
@@ -217,7 +219,7 @@
             // 
             this.txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_precio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_precio.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_precio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_precio.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_precio.Location = new System.Drawing.Point(13, 165);
@@ -231,7 +233,7 @@
             // 
             this.txt_codigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txt_codigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_codigo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_codigo.Location = new System.Drawing.Point(12, 87);
@@ -294,6 +296,7 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
             this.btn_agregar.FlatAppearance.BorderSize = 2;
             this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;

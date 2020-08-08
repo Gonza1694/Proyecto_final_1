@@ -26,3 +26,20 @@ C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Fina
 C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.CopyComplete
 C:\Users\gonza\OneDrive\Escritorio\Proyecto Final\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csprojAssemblyReference.cache
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.exe.config
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.exe
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Proyecto_Final_Lab_I.pdb
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csprojAssemblyReference.cache
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormClientes.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormCuenta_Cte.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormPrincipal.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormProductos.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormProveedores.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.FormVentas.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.Properties.Resources.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.GenerateResource.cache
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.CoreCompileInputs.cache
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csproj.CopyComplete
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.exe
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.pdb
