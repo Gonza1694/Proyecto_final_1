@@ -55,6 +55,7 @@
             this.pb_buscar = new System.Windows.Forms.PictureBox();
             this.dgv_detalleFactura = new System.Windows.Forms.DataGridView();
             this.txt_numFac = new System.Windows.Forms.TextBox();
+            this.lbl_teextranio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_busquedaProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalleFactura)).BeginInit();
@@ -378,11 +379,22 @@
             this.txt_numFac.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_numFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_numFac.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_numFac.Location = new System.Drawing.Point(448, 66);
+            this.txt_numFac.Location = new System.Drawing.Point(454, 66);
             this.txt_numFac.Name = "txt_numFac";
             this.txt_numFac.Size = new System.Drawing.Size(85, 15);
             this.txt_numFac.TabIndex = 14;
             this.txt_numFac.Text = "N° Factura ";
+            // 
+            // lbl_teextranio
+            // 
+            this.lbl_teextranio.AutoSize = true;
+            this.lbl_teextranio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_teextranio.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_teextranio.Location = new System.Drawing.Point(449, 532);
+            this.lbl_teextranio.Name = "lbl_teextranio";
+            this.lbl_teextranio.Size = new System.Drawing.Size(76, 25);
+            this.lbl_teextranio.TabIndex = 15;
+            this.lbl_teextranio.Text = "Carrito";
             // 
             // FormVentas
             // 
@@ -390,6 +402,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1050, 610);
+            this.Controls.Add(this.lbl_teextranio);
             this.Controls.Add(this.txt_numFac);
             this.Controls.Add(this.dgv_detalleFactura);
             this.Controls.Add(this.pb_buscar);
@@ -436,5 +449,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
         private System.Windows.Forms.DataGridView dgv_detalleFactura;
         private System.Windows.Forms.TextBox txt_numFac;
+        private System.Windows.Forms.Label lbl_teextranio;
     }
 }

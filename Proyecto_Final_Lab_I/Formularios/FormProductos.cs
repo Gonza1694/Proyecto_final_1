@@ -7,13 +7,15 @@ namespace Proyecto_Final_Lab_I
 {
     public partial class FormProductos : Form
     {
-        private Productos Productos;
+        private Producto Productos;
 
         public FormProductos()
         {
             InitializeComponent();
             CargarGrillaProductos();
             FormatearGrillaProductos();
+            //Placeholder(txt_codigo, "Código del producto");
+            //Placeholder(txt_stock, "Stock");
         }
 
         private void CargarGrillaProductos()
@@ -21,8 +23,8 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.DataSource = Program.Productos
                 .OrderBy(x => x.Codigo)
                  .ToList();
-
         }
+
         private void FormatearGrillaProductos()
         {
             dgv_busquedaProd.Columns["Codigo"].Visible = false;
@@ -37,20 +39,20 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
 
-		#region EVENTOS
-		
+        #region EVENTOS
 
-		private void btn_agregar_Click(object sender, EventArgs e)
-		{
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
             AgregarProducto();
+        }
 
-		}
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        // PLACEHOLDER
+        #region PLACEHOLDER
+
         private void txt_codigo_MouseDown(object sender, MouseEventArgs e)
         {
             if (txt_codigo.Text == "Código del producto")
@@ -82,6 +84,7 @@ namespace Proyecto_Final_Lab_I
                 txt_stock.Text = "Stock";
             }
         }
+
         private void txt_descripcion_MouseDown(object sender, MouseEventArgs e)
         {
             if (txt_descripcion.Text == "Descripción")
@@ -97,6 +100,7 @@ namespace Proyecto_Final_Lab_I
                 txt_descripcion.Text = "Descripción";
             }
         }
+
         private void txt_precio_MouseDown(object sender, MouseEventArgs e)
         {
             if (txt_precio.Text == 0.ToString("C"))
@@ -112,14 +116,16 @@ namespace Proyecto_Final_Lab_I
                 txt_precio.Text = 0.ToString("C");
             }
         }
-        //FIN PLACEHOLDER
+
+        #endregion PLACEHOLDER
 
         #endregion EVENTOS
 
-        #region METODOS  
+        #region METODOS
+
         private void AgregarProducto()
         {
-            Productos Productos = new Productos()
+            Producto Productos = new Producto()
             {
                 Codigo = int.Parse(txt_codigo.Text),
                 Descripcion = txt_descripcion.Text,
@@ -137,11 +143,9 @@ namespace Proyecto_Final_Lab_I
             txt_descripcion.Text = "Descripción";
             txt_stock.Text = "Stock";
             txt_precio.Text = 0.ToString("C");
-            Productos = new Productos();
+            Productos = new Producto();
         }
+
         #endregion METODOS
-
-
-
     }
 }

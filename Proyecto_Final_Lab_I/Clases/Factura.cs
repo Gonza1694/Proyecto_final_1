@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Proyecto_Final_Lab_I.Clases
 {
-    internal class Facturas
+    internal class Factura
     {
         public List<DetalleFactura> Items { get; set; }
         public int Numero { get; set; }
@@ -12,7 +12,8 @@ namespace Proyecto_Final_Lab_I.Clases
         public decimal Descuento { get; set; }
         public decimal Subtotal => Items.Sum(x => x.Subtotal);
         public decimal Total => Subtotal * (100 - Descuento) / 100;
-        public Facturas()
+
+        public Factura()
         {
             Items = new List<DetalleFactura>();
         }

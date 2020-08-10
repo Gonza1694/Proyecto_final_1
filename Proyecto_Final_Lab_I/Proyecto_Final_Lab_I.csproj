@@ -49,11 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\DetalleFactura.cs" />
-    <Compile Include="Clases\Facturas.cs" />
-    <Compile Include="Clases\Metodos.cs" />
-    <Compile Include="Clases\Productos.cs" />
-    <Compile Include="Clases\Proveedores.cs" />
+    <Compile Include="Clases\Entidad.cs" />
+    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\PersonaFisica.cs" />
+    <Compile Include="Clases\PersonaJuridica.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
+    <Compile Include="Formularios\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>

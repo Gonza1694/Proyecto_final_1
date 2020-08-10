@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Lab_I.Clases
 {
-    internal class Productos
+    internal class Producto
     {
         public int Codigo { get; set; }
         public string CodigoStr => Codigo.ToString("00000");

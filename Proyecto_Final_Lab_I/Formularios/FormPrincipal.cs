@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Proyecto_Final_Lab_I
 {
@@ -16,6 +16,7 @@ namespace Proyecto_Final_Lab_I
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
@@ -40,6 +41,7 @@ namespace Proyecto_Final_Lab_I
         {
             AbrirForm<FormVentas>();
         }
+
         private void btn_Productos_Click(object sender, EventArgs e)
         {
             AbrirForm<FormProductos>();
@@ -49,6 +51,7 @@ namespace Proyecto_Final_Lab_I
         {
             AbrirForm<FormClientes>();
         }
+
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
             AbrirForm<FormProveedores>();
@@ -74,14 +77,11 @@ namespace Proyecto_Final_Lab_I
                 flp_contenedor.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
-
             }
             else // Si el formulario existe, se lo trae al frente
             {
                 formulario.BringToFront();
             }
         }
-
-
     }
 }

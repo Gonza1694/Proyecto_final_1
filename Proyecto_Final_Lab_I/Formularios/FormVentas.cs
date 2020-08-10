@@ -8,17 +8,23 @@ namespace Proyecto_Final_Lab_I
 {
     public partial class FormVentas : Form
     {
-        private Facturas _facturas;
-        private Productos _productos;
+        private Factura _facturas;
+        private Producto _productos;
 
         public FormVentas()
         {
             InitializeComponent();
-            _facturas = new Facturas();
+            _facturas = new Factura();
             FormatearGrillaDetalle();
             CargarGrillaProductos(string.Empty);
             FormatearGrillaProductos();
             NumeradorFactura();
+            ContarProductos();
+        }
+
+        private void ContarProductos()
+        {
+            lbl_teextranio.Text = $"{_facturas.Items.Sum(x => x.Cantidad).ToString()} articulos en carrito";
         }
 
         #region EVENTOS
@@ -36,7 +42,7 @@ namespace Proyecto_Final_Lab_I
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             AgregarProducto();
-        }      
+        }
 
         private void pb_buscar_Click(object sender, EventArgs e)
         {
@@ -117,6 +123,7 @@ namespace Proyecto_Final_Lab_I
                 txt_precio.Text = _productos.PrecioUnitarioStr;
                 txt_descripcion.ReadOnly = true;
                 txt_precio.ReadOnly = true;
+                txt_cantidad.Text = "1";
             }
 
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -136,7 +143,7 @@ namespace Proyecto_Final_Lab_I
         private void btn_facturar_Click(object sender, EventArgs e)
         {
             Program.Facturas.Add(_facturas);
-            _facturas = new Facturas();
+            _facturas = new Factura();
             NumeradorFactura();
         }
 
@@ -156,13 +163,14 @@ namespace Proyecto_Final_Lab_I
             txt_descripcion.Text = "Descripción";
             txt_cantidad.Text = "Cantidad";
             txt_precio.Text = 0.ToString("C");
-            _facturas = new Facturas();
+            //_facturas = new Facturas();
         }
 
         private void AgregarProducto()
         {
             var itemSeleccionado = _facturas.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
-            if (txt_cantidad.Text == "" || txt_cantidad.Text == "Cantidad" || txt_cantidad == null)
+
+            if (string.IsNullOrEmpty(txt_cantidad.Text) || txt_cantidad.Text == "Cantidad")
             {
                 txt_cantidad.Text = "1";
             }
@@ -182,6 +190,7 @@ namespace Proyecto_Final_Lab_I
             }
             FormatearGrillaDetalle();
             ReinciarPanel();
+            ContarProductos();
         }
 
         private void ObtenerDetalle()
@@ -228,11 +237,13 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["Stock"].Visible = false;
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
-        private Productos ObtenerProducto(int valor)
+
+        private Producto ObtenerProducto(int valor)
         {
             var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
             return producto;
         }
+
         #endregion METODOS
     }
 }

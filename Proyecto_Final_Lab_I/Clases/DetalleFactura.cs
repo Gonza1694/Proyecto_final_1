@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Lab_I.Clases
 {
-    class DetalleFactura
+    internal class DetalleFactura
     {
         public decimal Codigo { get; set; }
         public string Descripcion { get; set; }
