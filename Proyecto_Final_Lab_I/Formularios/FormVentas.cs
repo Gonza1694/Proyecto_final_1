@@ -76,6 +76,8 @@ namespace Proyecto_Final_Lab_I
             {
                 txt_cantidad.Clear();
             }
+
+            txt_cantidad.Text = "1";
         }
 
         private void txt_cantidad_Leave(object sender, EventArgs e)
@@ -107,11 +109,43 @@ namespace Proyecto_Final_Lab_I
             }
         }
 
+        private Producto ObtenerProducto(int valor)
+        {
+            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
+            return producto;
+        }
+
+        private void txt_codigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text == "")
+            {
+                txt_codigo.Focus();
+                return;
+            }
+
+            _productos = ObtenerProducto(int.Parse(txt_codigo.Text));
+
+            if (_productos == null)
+            {
+                return;
+            }
+
+            ObtenerProducto(int.Parse(txt_codigo.Text));
+
+            txt_descripcion.Text = _productos.Descripcion;
+            txt_precio.Text = _productos.PrecioUnitarioStr;
+            txt_descripcion.ReadOnly = true;
+            txt_precio.ReadOnly = true;
+            txt_cantidad.Text = "1";
+        }
+
+        //PRESIONAR ENTER PARA CARGAR PRODUCTO DESDE LA LISTA
         private void txt_codigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
             {
                 _productos = ObtenerProducto(int.Parse(txt_codigo.Text));
+
                 if (_productos == null)
                 {
                     MessageBox.Show("Ingrese un producto existente");
@@ -119,6 +153,7 @@ namespace Proyecto_Final_Lab_I
                     dgv_busquedaProd.Visible = true;
                     return;
                 }
+
                 txt_descripcion.Text = _productos.Descripcion;
                 txt_precio.Text = _productos.PrecioUnitarioStr;
                 txt_descripcion.ReadOnly = true;
@@ -138,6 +173,10 @@ namespace Proyecto_Final_Lab_I
                     return;
                 }
             }
+        }
+        private void txt_cantidad_Enter(object sender, EventArgs e)
+        {
+            AgregarProducto();
         }
 
         private void btn_facturar_Click(object sender, EventArgs e)
@@ -163,17 +202,23 @@ namespace Proyecto_Final_Lab_I
             txt_descripcion.Text = "Descripción";
             txt_cantidad.Text = "Cantidad";
             txt_precio.Text = 0.ToString("C");
-            //_facturas = new Facturas();
         }
 
         private void AgregarProducto()
         {
             var itemSeleccionado = _facturas.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
+            if (txt_codigo.Text == "Código del producto" || txt_codigo.Text == "" || txt_descripcion.Text == "Descripción")
+            {
+                MessageBox.Show("Ingresa el código del producto");
+                txt_codigo.Focus();
+                return;
+            }
 
             if (string.IsNullOrEmpty(txt_cantidad.Text) || txt_cantidad.Text == "Cantidad")
             {
                 txt_cantidad.Text = "1";
             }
+
             if (itemSeleccionado == null)
             {
                 _facturas.Items.Add(new DetalleFactura
@@ -238,12 +283,8 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
 
-        private Producto ObtenerProducto(int valor)
-        {
-            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
-            return producto;
-        }
-
         #endregion METODOS
+
+        
     }
 }

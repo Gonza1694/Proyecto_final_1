@@ -11,7 +11,6 @@ namespace Proyecto_Final_Lab_I
         {
             InitializeComponent();
             CargarGrillaProductos();
-
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace Proyecto_Final_Lab_I
                 Email = txt_mail.Text
             };
             Program.Proveedores.Add(Proveedores);
-            //ReinciarPanel();
+            ReinciarPanel();
             CargarGrillaProductos();
         }
 
@@ -47,7 +46,11 @@ namespace Proyecto_Final_Lab_I
 
         private void ReinciarPanel()
         {
-            throw new NotImplementedException();
+            txt_cuit.Text = "CUIT";
+            txt_Localidad.Text = "Localidad";
+            txt_domicilio.Text = "Domicilio";
+            txt_telefono.Text = "Telefono";
+            txt_mail.Text = "Mail";
         }
     }
 }
