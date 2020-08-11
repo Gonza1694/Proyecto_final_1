@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 
 namespace Proyecto_Final_Lab_I

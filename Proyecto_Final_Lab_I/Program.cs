@@ -182,8 +182,8 @@ namespace Proyecto_Final_Lab_I
                 Celular = "3816123123",
                 Telefono = "3814321321",
                 Email = "cristian.daud@daud.com"
-            }); 
-            
+            });
+
             Clientes.Add(new Cliente
             {
                 Apellido = "Cantó",
@@ -198,13 +198,12 @@ namespace Proyecto_Final_Lab_I
 
             Proveedores.Add(new Proveedor
             {
-                RazonSocial="G.Pais",
-                CUIT="3016161616163",
-                Localidad="San Miguel de Tucuman",
-                Direccion="Junin 1100",
-                Telefono="3816010...3",
-                Email="gonzaa1694@gmail.com"
-
+                RazonSocial = "G.Pais",
+                CUIT = "3016161616163",
+                Localidad = "San Miguel de Tucuman",
+                Direccion = "Junin 1100",
+                Telefono = "3816010...3",
+                Email = "gonzaa1694@gmail.com"
             });
         }
     }

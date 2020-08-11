@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Final_Lab_I.Formularios;
+using System;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -82,6 +83,11 @@ namespace Proyecto_Final_Lab_I
             {
                 formulario.BringToFront();
             }
+        }
+
+        private void btn_listaFacturas_Click(object sender, EventArgs e)
+        {
+            AbrirForm<ListaFacturas>();
         }
     }
 }

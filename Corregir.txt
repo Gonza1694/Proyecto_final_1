@@ -1,0 +1,24 @@
+/// Corregir / Agregar
+
+Vetas
+	*Se puede superar el stock
+
+Productos
+	*Se pueden agregar productos con el mismo codigo
+	*Placeholder
+
+Clientes
+	*Dar formato a la grilla
+	*Corregir fecha
+	*Placeholder
+
+Proveedores
+	*Dar formato a la grilla
+	*Placeholder
+
+Cta Cte
+	*
+
+Lista de facturas
+	*Placeholder
+

@@ -115,22 +115,29 @@ namespace Proyecto_Final_Lab_I
             return producto;
         }
 
+        //CAMBIAR TEXTBOX PARA CARGAR PRODUCTO DESDE LA LISTA
         private void txt_codigo_TextChanged(object sender, EventArgs e)
         {
-            if (txt_codigo.Text == "")
+            if (string.IsNullOrEmpty(txt_codigo.Text))
             {
                 txt_codigo.Focus();
                 return;
             }
 
-            _productos = ObtenerProducto(int.Parse(txt_codigo.Text));
+            int salida = 0;
+
+            if (!int.TryParse(txt_codigo.Text, out salida))
+            {
+                return;
+            }
+
+            // Código del producto
+            _productos = ObtenerProducto(salida);
 
             if (_productos == null)
             {
                 return;
             }
-
-            ObtenerProducto(int.Parse(txt_codigo.Text));
 
             txt_descripcion.Text = _productos.Descripcion;
             txt_precio.Text = _productos.PrecioUnitarioStr;
@@ -159,6 +166,8 @@ namespace Proyecto_Final_Lab_I
                 txt_descripcion.ReadOnly = true;
                 txt_precio.ReadOnly = true;
                 txt_cantidad.Text = "1";
+
+                AgregarProducto();
             }
 
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -174,6 +183,7 @@ namespace Proyecto_Final_Lab_I
                 }
             }
         }
+
         private void txt_cantidad_Enter(object sender, EventArgs e)
         {
             AgregarProducto();
@@ -236,6 +246,8 @@ namespace Proyecto_Final_Lab_I
             FormatearGrillaDetalle();
             ReinciarPanel();
             ContarProductos();
+            txt_codigo.Clear();
+            txt_codigo.Focus();           
         }
 
         private void ObtenerDetalle()
@@ -269,6 +281,7 @@ namespace Proyecto_Final_Lab_I
                  .ToList();
         }
 
+        //Dar formato a la grilla
         private void FormatearGrillaProductos()
         {
             dgv_busquedaProd.Columns["Codigo"].Visible = false;
@@ -283,8 +296,15 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
 
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                AgregarProducto();
+            }
+        }
+
         #endregion METODOS
 
-        
     }
 }
