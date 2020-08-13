@@ -15,6 +15,9 @@ namespace Proyecto_Final_Lab_I.Clases
         public decimal Total => Subtotal * (100 - Descuento) / 100;
         public string TotalStr => Total.ToString("C");
 
+        public string FechaStr => Fecha.ToShortDateString();
+        public string HoraStr => Fecha.ToShortTimeString();
+
         public Factura()
         {
             Items = new List<DetalleFactura>();

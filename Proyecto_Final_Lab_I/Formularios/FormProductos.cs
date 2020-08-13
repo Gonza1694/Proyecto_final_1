@@ -122,9 +122,21 @@ namespace Proyecto_Final_Lab_I
         #endregion EVENTOS
 
         #region METODOS
+        private void AgregarStock()
+        {
 
+        }
         private void AgregarProducto()
         {
+            int codigo = int.Parse(txt_codigo.Text);
+            var codigoActual = Program.Productos.Any(x => x.Codigo.Equals(codigo));
+
+            if (codigoActual)
+            {
+                MessageBox.Show(text: "El código ya se encuentra registrado", caption: "Atencion!");
+                return;
+            }
+
             Producto Productos = new Producto()
             {
                 Codigo = int.Parse(txt_codigo.Text),
@@ -147,5 +159,13 @@ namespace Proyecto_Final_Lab_I
         }
 
         #endregion METODOS
+
+        private void dgv_busquedaProd_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_codigo.Text = this.dgv_busquedaProd.CurrentRow.Cells[0].Value.ToString();
+            txt_descripcion.Text = this.dgv_busquedaProd.CurrentRow.Cells[2].Value.ToString();
+            txt_precio.Text = this.dgv_busquedaProd.CurrentRow.Cells[3].Value.ToString();
+            txt_stock.Text = this.dgv_busquedaProd.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

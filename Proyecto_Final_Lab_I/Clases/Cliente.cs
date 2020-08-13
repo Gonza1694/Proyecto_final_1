@@ -5,5 +5,6 @@
         public bool CtaCte { get; set; }
         public bool LimiteDeCompra { get; set; }
         public decimal Monto { get; set; }
+        public string MontoStr => Monto.ToString("C");
     }
 }

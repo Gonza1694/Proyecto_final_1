@@ -111,10 +111,18 @@ namespace Proyecto_Final_Lab_I
             }
         }
 
-        private Producto ObtenerProducto(int valor)
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
-            return producto;
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                AgregarProducto();
+            }
+        }
+
+        private void timerFechaHora_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            lbl_fecha.Text = DateTime.Now.ToShortDateString();
         }
 
         //CAMBIAR TEXTBOX PARA CARGAR PRODUCTO DESDE LA LISTA
@@ -198,16 +206,24 @@ namespace Proyecto_Final_Lab_I
             AgregarProducto();
         }
 
+        //FACTURAR
         private void btn_facturar_Click(object sender, EventArgs e)
         {
             if (lbl_total.Text == "TOTAL $ 0,00")
             {
-                MessageBox.Show("Factura vacía");
+                MessageBox.Show("Factura vacía", caption: "Atencion!");
                 return;
             }
 
-            Program.Facturas.Add(_facturaactual);
+            //Modificar stock
+            foreach (var item in _facturaactual.Items)
+            {
+                var producto = Program.Productos.FirstOrDefault(x => item.Codigo == x.Codigo);
+                producto.Stock -= item.Cantidad;
+            }
+            _facturaactual.Fecha = DateTime.Now;
 
+            Program.Facturas.Add(_facturaactual);
             NumeradorFactura();
             ReinciarPanel();
             _facturaactual = new Factura();
@@ -232,6 +248,64 @@ namespace Proyecto_Final_Lab_I
 
         #region METODOS
 
+        private void AgregarProducto()
+        {
+            var itemSeleccionado = _facturaactual.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
+            if (txt_codigo.Text == "Código del producto" || txt_codigo.Text == "" || txt_descripcion.Text == "Descripción")
+            {
+                MessageBox.Show("Ingresa el código del producto");
+                txt_codigo.Focus();
+                return;
+            }
+
+            //Cuando no se coloca cantidad, por defecto es = 1
+            if (string.IsNullOrEmpty(txt_cantidad.Text) || txt_cantidad.Text == "Cantidad")
+            {
+                txt_cantidad.Text = "1";
+            }
+
+            // Controlar el stock
+            var productoStock = Program.Productos.FirstOrDefault(x => x.Codigo.ToString().Equals(txt_codigo.Text));
+            decimal.TryParse(txt_cantidad.Text, out decimal cantidadItem);
+            cantidadItem = itemSeleccionado == null ? cantidadItem : cantidadItem + itemSeleccionado.Cantidad;
+
+            if (cantidadItem > productoStock.Stock)
+            {
+                MessageBox.Show("No hay suficiente stock");
+                txt_cantidad.Focus();
+                return;
+            }
+
+            //Agregar item al detalle si no existe en el mismo
+            else if (itemSeleccionado == null)
+            {
+                _facturaactual.Items.Add(new DetalleFactura
+                {
+                    Codigo = _productos.Codigo,
+                    Descripcion = _productos.Descripcion,
+                    PrecioUnitario = _productos.PrecioUnitario,
+                    Cantidad = int.Parse(txt_cantidad.Text)
+                });
+            }
+            //Caso contrario sumarle la cantidad al producto agregado existente
+            else
+            {
+                itemSeleccionado.Cantidad += int.Parse(txt_cantidad.Text);
+            }
+
+            FormatearGrillaDetalle();
+            ReinciarPanel();
+            TotalFactura();
+            txt_codigo.Clear();
+            txt_codigo.Focus();
+        }
+
+        private Producto ObtenerProducto(int valor)
+        {
+            var producto = Program.Productos.FirstOrDefault(x => x.Codigo.Equals(valor));
+            return producto;
+        }
+
         private void NumeradorFactura()
         {
             _nrofactactual = Program.Facturas.Any() ? Program.Facturas.Max(x => x.Numero) + 1 : 0;
@@ -243,42 +317,6 @@ namespace Proyecto_Final_Lab_I
             txt_descripcion.Text = "Descripción";
             txt_cantidad.Text = "Cantidad";
             txt_precio.Text = 0.ToString("C");
-        }
-
-        private void AgregarProducto()
-        {
-            var itemSeleccionado = _facturaactual.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
-            if (txt_codigo.Text == "Código del producto" || txt_codigo.Text == "" || txt_descripcion.Text == "Descripción")
-            {
-                MessageBox.Show("Ingresa el código del producto");
-                txt_codigo.Focus();
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txt_cantidad.Text) || txt_cantidad.Text == "Cantidad")
-            {
-                txt_cantidad.Text = "1";
-            }
-
-            if (itemSeleccionado == null)
-            {
-                _facturaactual.Items.Add(new DetalleFactura
-                {
-                    Codigo = _productos.Codigo,
-                    Descripcion = _productos.Descripcion,
-                    PrecioUnitario = _productos.PrecioUnitario,
-                    Cantidad = int.Parse(txt_cantidad.Text)
-                });
-            }
-            else
-            {
-                itemSeleccionado.Cantidad += int.Parse(txt_cantidad.Text);
-            }
-            FormatearGrillaDetalle();
-            ReinciarPanel();
-            TotalFactura();
-            txt_codigo.Clear();
-            txt_codigo.Focus();
         }
 
         private void ObtenerDetalle()
@@ -327,20 +365,6 @@ namespace Proyecto_Final_Lab_I
             dgv_busquedaProd.Columns["StockStr"].HeaderText = "Stock";
         }
 
-        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
-            {
-                AgregarProducto();
-            }
-        }
-
-        #endregion METODOS
-
-        private void timerFechaHora_Tick(object sender, EventArgs e)
-        {
-            lbl_hora.Text = DateTime.Now.ToLongTimeString();
-            lbl_fecha.Text = DateTime.Now.ToShortDateString();
-        }
+        #endregion METODOS        
     }
 }

@@ -18,14 +18,17 @@ namespace Proyecto_Final_Lab_I.Formularios
             dgv_listaFacturas.DataSource = Program.Facturas.OrderBy(x => x.Numero).ToList();
 
             dgv_listaFacturas.Columns["Numero"].Visible = false;
-
             dgv_listaFacturas.Columns["NumeroStr"].HeaderText = "N° de Factura";
 
             dgv_listaFacturas.Columns["Descuento"].Visible = false;
 
             dgv_listaFacturas.Columns["Total"].Visible = false;
-
             dgv_listaFacturas.Columns["TotalStr"].HeaderText = "Total";
+
+            dgv_listaFacturas.Columns["Fecha"].Visible = false;
+            dgv_listaFacturas.Columns["FechaStr"].HeaderText = "Fecha";
+
+            dgv_listaFacturas.Columns["HoraStr"].HeaderText = "Hora";
         }
 
         private void FormatearGrillaFacturas()

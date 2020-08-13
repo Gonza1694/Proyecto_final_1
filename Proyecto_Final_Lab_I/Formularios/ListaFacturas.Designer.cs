@@ -67,7 +67,7 @@
             this.dgv_listaFacturas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_listaFacturas.EnableHeadersVisualStyles = false;
             this.dgv_listaFacturas.GridColor = System.Drawing.Color.LightGreen;
-            this.dgv_listaFacturas.Location = new System.Drawing.Point(153, 72);
+            this.dgv_listaFacturas.Location = new System.Drawing.Point(12, 72);
             this.dgv_listaFacturas.Name = "dgv_listaFacturas";
             this.dgv_listaFacturas.ReadOnly = true;
             this.dgv_listaFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -84,7 +84,7 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dgv_listaFacturas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_listaFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_listaFacturas.Size = new System.Drawing.Size(767, 433);
+            this.dgv_listaFacturas.Size = new System.Drawing.Size(500, 433);
             this.dgv_listaFacturas.TabIndex = 23;
             // 
             // btn_cerrar

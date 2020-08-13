@@ -14,6 +14,15 @@ namespace Proyecto_Final_Lab_I
 
         private void FormatearGrilla()
         {
+            dgv_listaClientes.Columns["CtaCte"].Visible = false;
+
+            dgv_listaClientes.Columns["LimiteDeCompra"].Visible = false;
+
+            dgv_listaClientes.Columns["Monto"].Visible = false;
+
+            dgv_listaClientes.Columns["MontoStr"].HeaderText = "Monto";
+
+            
         }
 
         private void btn_cancelar_Click(object sender, System.EventArgs e)
