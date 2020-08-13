@@ -1,4 +1,6 @@
-﻿namespace Proyecto_Final_Lab_I
+﻿using Proyecto_Final_Lab_I.Formularios;
+
+namespace Proyecto_Final_Lab_I
 {
     partial class FormPrincipal
     {
@@ -28,9 +30,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.txt_numFac = new System.Windows.Forms.TextBox();
@@ -73,6 +76,9 @@
             this.btn_Clientes = new System.Windows.Forms.Button();
             this.btn_Productos = new System.Windows.Forms.Button();
             this.btn_Venta = new System.Windows.Forms.Button();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -180,33 +186,33 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView1.Location = new System.Drawing.Point(49, 158);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView1.Size = new System.Drawing.Size(950, 321);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -333,6 +339,8 @@
             // flp_contenedor
             // 
             this.flp_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.flp_contenedor.Controls.Add(this.lbl_fecha);
+            this.flp_contenedor.Controls.Add(this.lbl_hora);
             this.flp_contenedor.Controls.Add(this.pic_lgoContenedor);
             this.flp_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_contenedor.Location = new System.Drawing.Point(250, 40);
@@ -440,7 +448,7 @@
             // pic_logoLateral
             // 
             this.pic_logoLateral.Image = global::Proyecto_Final_Lab_I.Properties.Resources.image2;
-            this.pic_logoLateral.Location = new System.Drawing.Point(44, 18);
+            this.pic_logoLateral.Location = new System.Drawing.Point(43, 18);
             this.pic_logoLateral.Name = "pic_logoLateral";
             this.pic_logoLateral.Size = new System.Drawing.Size(147, 90);
             this.pic_logoLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -577,6 +585,34 @@
             this.btn_Venta.UseVisualStyleBackColor = true;
             this.btn_Venta.Click += new System.EventHandler(this.btn_Venta_Click);
             // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_hora.Location = new System.Drawing.Point(890, 3);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(26, 20);
+            this.lbl_hora.TabIndex = 10;
+            this.lbl_hora.Text = "Hr";
+            this.lbl_hora.Click += new System.EventHandler(this.lbl_hora_Click);
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_fecha.Location = new System.Drawing.Point(967, 3);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(54, 20);
+            this.lbl_fecha.TabIndex = 11;
+            this.lbl_fecha.Text = "Fecha";
+            // 
+            // timerFechaHora
+            // 
+            this.timerFechaHora.Enabled = true;
+            this.timerFechaHora.Tick += new System.EventHandler(this.timerFechaHora_Tick);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,6 +633,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.flp_contenedor.ResumeLayout(false);
+            this.flp_contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_lgoContenedor)).EndInit();
             this.flp_lateral.ResumeLayout(false);
             this.flp_lateral.PerformLayout();
@@ -655,6 +692,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btn_caja;
         private System.Windows.Forms.Button btn_listaFacturas;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Timer timerFechaHora;
     }
 }
 

@@ -15,6 +15,7 @@ namespace Proyecto_Final_Lab_I
         public static List<Factura> Facturas = new List<Factura>();
         public static List<Cliente> Clientes = new List<Cliente>();
         public static List<Proveedor> Proveedores = new List<Proveedor>();
+        public static List<Usuario> Usuarios = new List<Usuario>();
 
         [STAThread]
         private static void Main()

@@ -16,11 +16,21 @@ namespace Proyecto_Final_Lab_I.Formularios
         private void CargarGrillaFacturas()
         {
             dgv_listaFacturas.DataSource = Program.Facturas.OrderBy(x => x.Numero).ToList();
+
+            dgv_listaFacturas.Columns["Numero"].Visible = false;
+
+            dgv_listaFacturas.Columns["NumeroStr"].HeaderText = "N° de Factura";
+
+            dgv_listaFacturas.Columns["Descuento"].Visible = false;
+
+            dgv_listaFacturas.Columns["Total"].Visible = false;
+
+            dgv_listaFacturas.Columns["TotalStr"].HeaderText = "Total";
         }
 
         private void FormatearGrillaFacturas()
         {
-            //throw new NotImplementedException();
+            dgv_listaFacturas.Columns["Subtotal"].Visible = false;
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)

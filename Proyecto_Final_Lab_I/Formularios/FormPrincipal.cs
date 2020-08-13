@@ -64,7 +64,7 @@ namespace Proyecto_Final_Lab_I
         }
 
         //Abrir formulario dentro del panel
-        private void AbrirForm<MiForm>() where MiForm : Form, new()
+        public void AbrirForm<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = flp_contenedor.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la coleccion el form
@@ -88,6 +88,16 @@ namespace Proyecto_Final_Lab_I
         private void btn_listaFacturas_Click(object sender, EventArgs e)
         {
             AbrirForm<ListaFacturas>();
+        }
+
+        private void timerFechaHora_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            lbl_fecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void lbl_hora_Click(object sender, EventArgs e)
+        {
         }
     }
 }

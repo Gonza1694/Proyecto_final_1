@@ -43,3 +43,4 @@ D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.
 D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.pdb
 D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.csprojAssemblyReference.cache
 D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.Formularios.ListaFacturas.resources
+D:\Desktop\Proyecto_final_1\Proyecto_Final_Lab_I\obj\Debug\Proyecto_Final_Lab_I.Formularios.FormLogin.resources

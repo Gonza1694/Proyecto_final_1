@@ -8,23 +8,25 @@ namespace Proyecto_Final_Lab_I
 {
     public partial class FormVentas : Form
     {
-        private Factura _facturas;
+        private Factura _facturaactual;
         private Producto _productos;
+        private int _nrofactactual;
 
         public FormVentas()
         {
             InitializeComponent();
-            _facturas = new Factura();
+            _facturaactual = new Factura();
             FormatearGrillaDetalle();
             CargarGrillaProductos(string.Empty);
             FormatearGrillaProductos();
             NumeradorFactura();
-            ContarProductos();
+            CabeceraFactura();
+            TotalFactura();
         }
 
-        private void ContarProductos()
+        private void TotalFactura()
         {
-            lbl_teextranio.Text = $"{_facturas.Items.Sum(x => x.Cantidad).ToString()} articulos en carrito";
+            lbl_total.Text = $"TOTAL {_facturaactual.Items.Sum(x => x.Subtotal).ToString("C")}";
         }
 
         #region EVENTOS
@@ -151,6 +153,13 @@ namespace Proyecto_Final_Lab_I
         {
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
             {
+                if (txt_codigo.Text == "")
+                {
+                    MessageBox.Show("Ingrese el código de un producto");
+                    txt_buscar.Focus();
+                    dgv_busquedaProd.Visible = true;
+                    return;
+                }
                 _productos = ObtenerProducto(int.Parse(txt_codigo.Text));
 
                 if (_productos == null)
@@ -191,9 +200,32 @@ namespace Proyecto_Final_Lab_I
 
         private void btn_facturar_Click(object sender, EventArgs e)
         {
-            Program.Facturas.Add(_facturas);
-            _facturas = new Factura();
+            if (lbl_total.Text == "TOTAL $ 0,00")
+            {
+                MessageBox.Show("Factura vacía");
+                return;
+            }
+
+            Program.Facturas.Add(_facturaactual);
+
             NumeradorFactura();
+            ReinciarPanel();
+            _facturaactual = new Factura();
+            LimpiarDetalleFactura();
+            CabeceraFactura();
+        }
+
+        private void CabeceraFactura()
+        {
+            _facturaactual.Numero = _nrofactactual;
+            lbl_numFacStr.Text = _nrofactactual.ToString("020-10000");
+        }
+
+        private void LimpiarDetalleFactura()
+        {
+            dgv_detalleFactura.DataSource = _facturaactual.Items;
+            lbl_total.Text = "TOTAL $ 0,00";
+            FormatearGrillaDetalle();
         }
 
         #endregion EVENTOS
@@ -202,8 +234,7 @@ namespace Proyecto_Final_Lab_I
 
         private void NumeradorFactura()
         {
-            _facturas.Numero = Program.Facturas.Any() ? Program.Facturas.Max(x => x.Numero) + 1 : 0;
-            txt_numFac.Text += _facturas.Numero.ToString();
+            _nrofactactual = Program.Facturas.Any() ? Program.Facturas.Max(x => x.Numero) + 1 : 0;
         }
 
         private void ReinciarPanel()
@@ -216,7 +247,7 @@ namespace Proyecto_Final_Lab_I
 
         private void AgregarProducto()
         {
-            var itemSeleccionado = _facturas.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
+            var itemSeleccionado = _facturaactual.Items.FirstOrDefault(x => x.Codigo.Equals(_productos.Codigo));
             if (txt_codigo.Text == "Código del producto" || txt_codigo.Text == "" || txt_descripcion.Text == "Descripción")
             {
                 MessageBox.Show("Ingresa el código del producto");
@@ -231,7 +262,7 @@ namespace Proyecto_Final_Lab_I
 
             if (itemSeleccionado == null)
             {
-                _facturas.Items.Add(new DetalleFactura
+                _facturaactual.Items.Add(new DetalleFactura
                 {
                     Codigo = _productos.Codigo,
                     Descripcion = _productos.Descripcion,
@@ -245,15 +276,15 @@ namespace Proyecto_Final_Lab_I
             }
             FormatearGrillaDetalle();
             ReinciarPanel();
-            ContarProductos();
+            TotalFactura();
             txt_codigo.Clear();
-            txt_codigo.Focus();           
+            txt_codigo.Focus();
         }
 
         private void ObtenerDetalle()
         {
             //Carga el detalle de la factura
-            dgv_detalleFactura.DataSource = _facturas.Items.ToList();
+            dgv_detalleFactura.DataSource = _facturaactual.Items.ToList();
         }
 
         private void FormatearGrillaDetalle()
@@ -306,5 +337,10 @@ namespace Proyecto_Final_Lab_I
 
         #endregion METODOS
 
+        private void timerFechaHora_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            lbl_fecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

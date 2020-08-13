@@ -8,5 +8,10 @@ namespace Proyecto_Final_Lab_I
         {
             InitializeComponent();
         }
+
+        private void bnt_cancelar_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

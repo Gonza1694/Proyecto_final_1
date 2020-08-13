@@ -2,6 +2,7 @@
 
 Vetas
 	*Se puede superar el stock
+	*Modificacion de stock - +
 
 Productos
 	*Se pueden agregar productos con el mismo codigo

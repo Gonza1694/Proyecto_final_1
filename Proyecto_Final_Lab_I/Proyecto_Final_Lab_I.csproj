@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Caja.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\DetalleFactura.cs" />
     <Compile Include="Clases\Entidad.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Clases\PersonaJuridica.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Formularios\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +77,12 @@
     </Compile>
     <Compile Include="Formularios\FormCuenta_Cte.Designer.cs">
       <DependentUpon>FormCuenta_Cte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -113,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormCuenta_Cte.resx">
       <DependentUpon>FormCuenta_Cte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
